@@ -1,0 +1,179 @@
+    1  g++
+    2  cpp
+    3  gcc
+    4  sudo apt install g++
+    5  g++
+    6  ls
+    7  cd Desktop/
+    8  nano main.cpp
+    9  g++ main.cpp -o main
+   10  nano main.cpp
+   11  g++ main.cpp -o main
+   12  ./main
+   13  nano main.cpp
+   14  cd Desktop/
+   15  nano main.cpp
+   16  cat main
+   17  cleatr
+   18  clear
+   19  cat main.cpp
+   20  cls
+   21  clear
+   22  nano lab.txt
+   23  What is the UNIX shell?
+   24  Shell is a text user interface (TUI) for access to an operating
+   25  system’s services. Has many implementations: bash shell, original
+   26  Unix shell, Bourne shell, ksh, cshWhat is the UNIX shell?
+   27  Shell is a text user interface (TUI) for access to an operating
+   28  system’s services.~~AA
+   29  nano lab.txt
+   30  ls
+   31  sort -n -r lab.txt > namelist.sorted
+   32  nano namelist.sorted
+   33  rm lab.txt
+   34  rm namelist.sorted
+   35  ls
+   36  nano lab.txt
+   37  sort -n -r lab.txt > namelist.sorted
+   38  nano namelist.sorted
+   39  sort -n lab.txt > namelist.sorted
+   40  nano namelist.sorted
+   41  rm lab.txt
+   42  rm namelist.sorted
+   43  ls
+   44  cd Do
+   45  cd Documents/
+   46  mkdir Week1
+   47  ls
+   48  cd Week1/
+   49  ls
+   50  sudo su
+   51  script
+   52  mkdir week1
+   53  cd week1/
+   54  find -n 5 /usr/bin gcc
+   55  find /usr/bin -name '*gcc*' | head -n 5
+   56  find /usr/bin -name '*gcc*' | head -n 5 > ~/week1/ex1.txt
+   57  nano ex1.txt
+   58  nano ex1.sh
+   59  find /usr/bin -name '*gcc*' | head -n 5 > ~/week1/ex1.txt
+   60  nano ex1.sh
+   61  jobs
+   62  pc
+   63  pcs
+   64  ps
+   65  sleep 1
+   66  history
+   67  nano ex2.sh
+   68  sh ex2.sh
+   69  history
+   70  sh ex2.sh
+   71  g
+   72  history
+   73  sh ex2.sh
+   74  jobs
+   75  ps
+   76  sleep 1
+   77  history > ~/week1/ex2.txt
+   78  sh example1.sh
+   79  nano example1.sh
+   80  sh example1.sh
+   81  nano example1.sh
+   82  sh example1.sh
+   83  nano example1.sh
+   84  sh example1.sh
+   85  ls
+   86  cd ../
+   87  ls
+   88  cd ~
+   89  ls
+   90  nano ex3.sh
+   91  mk ~/week1/root.txt
+   92  make ~/week1/root.txt
+   93  touch ~/week1/root.txt
+   94  echo ~/week1/root/root.txt
+   95  cat ~/week1/root/root.txt
+   96  cat ~/week1/ex1.txt
+   97  ls -t /
+   98  ls -c /
+   99  ls -t /
+  100  ls -t / > ~/week1/root/root.txt
+  101  ls -t -r /
+  102  ls
+  103  sh ex3.sh
+  104  sh ex3.txt
+  105  sh ex3.sh
+  106  gedit ~/week1/maic.c
+  107  ls
+  108  gedit ~/week1/main.c
+  109  gcc
+  110  gcc main.c -o ex4
+  111  ./ex4
+  112  git init
+  113  sudo apt install git
+  114  git init
+  115  git add .
+  116  git rm
+  117  git rm home/
+  118  git rm -r home/
+  119  git rm -r -f home/
+  120  sh ex3.sh
+  121  git status
+  122  gt add home .txt
+  123  git add home .txt
+  124  git add home.txt
+  125  git add root.txt
+  126  git
+  127  git status
+  128  git rm -r -f root/
+  129  sh ex3.sh
+  130  git status
+  131  git commit -m "First week"
+  132  git config --global zaqbez39me.korolov_k@mail.ru "korolov_k@mail.ru"
+  133  git config --global zaqbez39me.Kirill "Kirill"
+  134  git commit -m "First week"
+  135  git config --global user.emal "korolov_k@mail.ru"
+  136  git config --global user.name "Korolev Kirill"
+  137  git commit -m "First week"
+  138  git config --global user.email "korolov_k@mail.ru"
+  139  git commit -m "First week"
+  140  git remote add origin https://github.com/zaqbez39me/OS-Course.git
+  141  git branch -M main
+  142  git push -u origin main
+  143  git remote add origin https://github.com/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@github.com/zaqbez39me/OS-Course.gi
+  144  git push -u origin main
+  145  git push -u origin https://github.com/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@github.com/zaqbez39me/OS-Course.git
+  146  git push -u origin https://github.com/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@github.com/zaqbez39me/OS-Course.main.git
+  147  git push https://github.com/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@github.com/zaqbez39me/OS-Course.git
+  148  git push https://github.com/zaqbez39me/OS-Course.git
+  149  git push -u origin main
+  150  git status
+  151  git add week01
+  152  git commit -m "Update"
+  153  git push
+  154  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
+  155  git status
+  156  cd week1/
+  157  git status
+  158  git add ex1.sh
+  159  git status
+  160  git add ex1.txt
+  161  git add ex2.sh
+  162  git add ex3.sh
+  163  git add ex2.txt
+  164  git add ex4
+  165  git add home.txt
+  166  git add main.c
+  167  git add root.txt
+  168  git status
+  169  git commit -m "Update 2"
+  170  git push
+  171  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
+  172  git commit -m "Update 2"
+  173  git push
+  174  sudo snap install clion --classic
+  175  sh ex3.sh
+  176  jobs
+  177  ps
+  178  sleep 1
+  179  history > ~/week01/ex2.txt
