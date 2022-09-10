@@ -4,19 +4,19 @@
 #define END_SYM '.'
 
 unsigned int get_end(char *x){
-    int i, x_length = strlen(x) - 1;
+    int i, x_length = strlen(x);
     if (x_length == 0)
         return -1;
     for(i = 0; i < x_length; ++i){
         if(*(x + i) == END_SYM)
-            return i - 1;
+            return i;
     }
     return i - 1;
 }
 
 void print_reversed(char *x, int length){
     putchar('\"');
-    for(int i = length; i >= 0; --i){
+    for(int i = length - 1; i >= 0; --i){
         putchar(*(x + i));
     }
     putchar('\"');

@@ -1,4 +1,6 @@
 #include "stdio.h"
+#include "stdlib.h"
+#include "string.h"
 
 _Bool in_range(int x, int from, int to){
     return from <= x && x <= to ? 1 : 0;
@@ -11,7 +13,22 @@ void rec_convert(long long int x, unsigned int to){
     fprintf(stdout, "%lli", x % to);
 }
 
-void convert(long long int x, unsigned int from, unsigned int to){
+_Bool validate(char *x){
+    for(int i = 0; i < strlen(x); ++i){
+    	if(*(x + i) > 57 || 48 > *(x + i)){
+    	    return 1;
+    	}
+    }
+    return 0;
+}
+
+void convert(char *s, unsigned int from, unsigned int to){
+    if (validate(s)){
+    	fprintf(stdout,"cannot convert!");
+        return;
+    }
+    char *eptr;
+    long long x = strtoll(s, &eptr,10);
     if (!in_range(from, 2, 10) || !in_range(to, 2, 10)) {
         fprintf(stdout,"cannot convert!");
         return;
@@ -40,10 +57,10 @@ void convert(long long int x, unsigned int from, unsigned int to){
 }
 
 int main(){
-    long long int number = 0;
+    char number[19];
     unsigned int source, target;
     printf("Write your number: ");
-    scanf("%lli", &number);
+    scanf("%s", number);
     printf("Write your source system: ");
     scanf("%ui", &source);
     printf("Write your target system: ");
