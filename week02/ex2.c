@@ -15,11 +15,11 @@ unsigned int get_end(char *x){
 }
 
 void print_reversed(char *x, int length){
-    putchar('\"');
+    fputc('\"', stdout);
     for(int i = length - 1; i >= 0; --i){
-        putchar(*(x + i));
+        fputc(*(x + i), stdout);
     }
-    putchar('\"');
+    fputc('\"', stdout);
 }
 
 int main(){

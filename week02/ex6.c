@@ -4,12 +4,12 @@ void first(int n){
     int line = 0;
     int cur = 1;
     while(cur <= n){
-        printf("*");
+        fputc('*', stdout);
         line++;
         if(line == cur){
             line = 0;
             cur++;
-            printf("\n");
+            fputc('\n', stdout);
         }
     }
 }
@@ -17,12 +17,12 @@ void second(int n){
     int line = 0;
     int cur = 1;
     while(cur <= n){
-        printf("*");
+        fputc('*', stdout);
         line++;
         if(line == cur || cur > n / 2 && n - cur + 1 == line){
             line = 0;
             cur++;
-            printf("\n");
+            fputc('\n', stdout);
         }
     }
 }
@@ -31,12 +31,12 @@ void third(int n){
     int line = 0;
     int cur = 1;
     while(cur <= n){
-        printf("*");
+        fputc('*', stdout);
         line++;
         if(line == n){
             line = 0;
             cur++;
-            printf("\n");
+            fputc('\n', stdout);
         }
     }
 }
@@ -44,10 +44,10 @@ void third(int n){
 int main(){
     fprintf(stdout, "Select pattern(1-3): ");
     unsigned int pattern_num;
-    scanf("%ui", &pattern_num);
+    fscanf(stdin, "%ui", &pattern_num);
     unsigned int n;
-    printf("Choose n(> 0): ");
-    scanf("%ui", &n);
+    fprintf(stdout, "Choose n(> 0): ");
+    fscanf(stdin, "%ui", &n);
     switch (pattern_num) {
         case 1:
             first(n);
@@ -59,6 +59,6 @@ int main(){
             third(n);
             break;
         default:
-            printf("No such pattern!");
+            fprintf(stdout, "No such pattern!");
     }
 }
