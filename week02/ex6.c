@@ -42,11 +42,18 @@ void third(int n){
 }
 
 int main(){
-    fprintf(stdout, "Select pattern(1-3): ");
+    fprintf(stdout, "Choose pattern: \n"
+    " 1: *      2: *    3: ******\n"
+    "    **        **      ******\n"
+    "    ***       ***     ******\n"
+    "    ****      ****    ******\n"
+    "    *****     ***     ******\n"
+    "    ******    **      ******\n"
+    "    *******   *       ******\n");
     unsigned int pattern_num;
     fscanf(stdin, "%ui", &pattern_num);
     unsigned int n;
-    fprintf(stdout, "Choose n(> 0): ");
+    fprintf(stdout, "Enter n:\n");
     fscanf(stdin, "%ui", &n);
     switch (pattern_num) {
         case 1:
