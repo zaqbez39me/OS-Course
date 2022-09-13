@@ -24,6 +24,12 @@ void print_reversed(char *x, int length){
 
 int main(){
     char str[256];
-    fgets(str, 256, stdin);
+    char symbol;
+    int index = 0;
+    do{
+        fscanf(stdin, "%c", &symbol);
+        str[index++] = symbol; 
+    } while(symbol != END_SYM || symbol != '\n');
+    str[index + 1] = '\0';
     print_reversed(str, get_end(str));
 }
