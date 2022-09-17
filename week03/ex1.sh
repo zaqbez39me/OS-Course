@@ -1,2 +1,2 @@
-gcc ~/week02/ex1.c -o ex1
+gcc ~/week03/ex1.c -o ex1
 ./ex1
