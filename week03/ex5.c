@@ -43,6 +43,7 @@ void* meanDouble(const void* a, const void* b){
     return res;
 }
 
+// Vaggreagate function that applies n functions to the initial array
 void* vaggregate(void* base, size_t size, int n, void* initial_value,
                  int number, ...){
     va_list args;
