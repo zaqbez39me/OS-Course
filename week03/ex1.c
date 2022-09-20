@@ -9,17 +9,18 @@ int foo(int age){
 int main(){
     int const x = 10;
     int const *q = &x;
-    int * const p = (int *) malloc(sizeof(int) * 5);
+    int const * const p = (int *) malloc(sizeof(int) * 5);
+    int * const p_c = p; // to access protected cells
     for(int i = 0; i < 5; ++i) {
-        p[i] = *q;
+        p_c[i] = *q;
         printf("%p\n", (p + i));
     }
     for(int i = 0; i < 5; ++i) {
-        fscanf(stdin, "%i", p + i);
+        fscanf(stdin, "%i", p_c + i);
     }
     for(int i = 0; i < 5; ++i){
-        p[i] = foo(p[i]);
+        p_c[i] = foo(p[i]);
     }
-    free(p);
+    free(p_c);
     return EXIT_SUCCESS;
 }
