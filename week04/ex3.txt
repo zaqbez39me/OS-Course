@@ -1,0 +1,15 @@
+// The results of the first run for 3 fork calls
+As a result we got 2^3 processes what is equal to 8.
+We got such result because after each iteration number of processes grows as 2^n.
+It takes 5 * n time. n = 3 => time is 15 seconds.
+
+
+// The results of the second run for 5 fork calls
+As a result we got 2^5 processes what is equal to 32.
+This is also caused by rate of growth of our processes number.
+It takes 5 * n time. n = 5 => time is 25 seconds.
+
+// The difference
+The difference between second and first experiments:
+    Number of processes: 32 - 8 = 24
+    Time execution: 25 - 15 = 10 seconds
