@@ -1,5 +1,6 @@
 #include <unistd.h>
 #include <stdlib.h>
+#include <sys/wait.h>
 
 int main(int argc, char *argv[]){
     long int n;
@@ -11,5 +12,6 @@ int main(int argc, char *argv[]){
         fork();
         sleep(5);
     }
+    while (wait(NULL) > 0);
     return EXIT_SUCCESS;
 }
