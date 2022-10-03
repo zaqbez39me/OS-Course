@@ -1,0 +1,1 @@
+For this experiment, time ascends while number of threads grows because threads count amount of prime numbers independently on their intervals.

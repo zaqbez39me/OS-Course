@@ -1,0 +1,2 @@
+For this experiment, time descends while number of threads grows because threads count amount of prime numbers sequentially and have to wait for each other.
+Therefore, more threads make program run slower.
