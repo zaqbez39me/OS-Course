@@ -1,15 +1,13 @@
-cd ... || ~/week05/
+cd ~/week05/ || exit
 gcc ex4.c -o ex4
 
-printf "For m = 1:" > ex4.txt
-(time ./ex4 10000000 1) 2>> ex4.txt
-printf "For m = 2:" >> ex4.txt
-(time ./ex4 10000000 2) 2>> ex4.txt
-printf "For m = 4:" >> ex4.txt
-(time ./ex4 10000000 4) 2>> ex4.txt
-printf "For m = 10:" >> ex4.txt
-(time ./ex4 10000000 10) 2>> ex4.txt
-printf "For m = 100:" >> ex4.txt
-(time ./ex4 10000000 100) 2>> ex4.txt
-
-./ex2
+printf "For m = 1:\n" > ex4.txt
+/bin/time -p -a -o ex4.txt ./ex4 10000000 1
+printf "For m = 2:\n" >> ex4.txt
+/bin/time -p -a -o ex4.txt ./ex4 10000000 2
+printf "For m = 4:\n" >> ex4.txt
+/bin/time -p -a -o ex4.txt ./ex4 10000000 4
+printf "For m = 10:\n" >> ex4.txt
+/bin/time -p -a -o ex4.txt ./ex4 10000000 10
+printf "For m = 100:\n" >> ex4.txt
+/bin/time -p -a -o ex4.txt ./ex4 10000000 100

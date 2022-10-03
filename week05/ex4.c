@@ -4,9 +4,9 @@
 
 int is_prime(int n)
 {
-    if (n <= 1)
+    if (n <= 1 || (n % 2 == 0 && n > 2))
         return 0;
-    for (int d = 2; d * d <= n; d++)
+    for (int d = 3; d * d <= n; d += 2)
         if (n % d == 0)
             return 0;
     return 1;
@@ -38,12 +38,6 @@ void increment_primes()
 
 void *check_primes(void *arg)
 {
-    /*
-      TODO
-      Complete this function. This function loops forever, continuously taking a value from get_number_to_check and, if it turns out to be prime, increments the global prime counter with increment_primes. Once get_number_to_check returns <n>, the function exits.
-
-      Pay close attention to your use of the global mutex.
-    */
     int number_to_check;
     while(1) {
         pthread_mutex_lock(&global_lock);

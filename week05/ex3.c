@@ -4,9 +4,9 @@
 
 int is_prime(int n)
 {
-    if (n <= 1)
+    if (n <= 1 || (n % 2 == 0 && n > 2))
         return 0;
-    for (int d = 2; d * d <= n; d++)
+    for (int d = 3; d * d <= n; d += 2)
         if (n % d == 0)
             return 0;
     return 1;
@@ -48,12 +48,12 @@ int main(int argc, char *argv[])
 
     for (int i = 0; i < n_threads; i++)
     {
-        requests[i].start = i * segment_size + 1;
+        requests[i].start = i * segment_size;
         int last = (i + 1) * segment_size;
         requests[i].finish = (last == n ? last - 1 : last);
         if(requests[i].finish > n)
             requests[i].finish = n - 1;
-        pthread_create(&threads[i], results[i], &prime_counter, &requests[i]);
+        pthread_create(&threads[i], NULL, &prime_counter, &requests[i]);
     }
 
     for (int i = 0; i < n_threads; i++)
@@ -66,6 +66,8 @@ int main(int argc, char *argv[])
         total_result += *(int *)results[i];
 
     free(threads);
+    for(int i = 0; i < n_threads; ++i)
+        free(results[i]);
     free(requests);
     free(results);
 

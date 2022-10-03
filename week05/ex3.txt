@@ -1,20 +1,20 @@
 For m = 1:
-real	0m3,369s
-user	0m3,369s
-sys	0m0,000s
+real 1.52
+user 1.52
+sys 0.00
 For m = 2:
-real	0m1,991s
-user	0m3,247s
-sys	0m0,000s
+real 0.95
+user 1.53
+sys 0.00
 For m = 4:
-real	0m1,126s
-user	0m3,446s
-sys	0m0,000s
+real 0.53
+user 1.65
+sys 0.00
 For m = 10:
-real	0m0,880s
-user	0m5,195s
-sys	0m0,008s
+real 0.40
+user 2.48
+sys 0.00
 For m = 100:
-real	0m0,710s
-user	0m5,601s
-sys	0m0,004s
+real 0.55
+user 2.40
+sys 0.32
