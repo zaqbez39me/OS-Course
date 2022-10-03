@@ -25,7 +25,7 @@ int main(){
         sprintf(temp, "Hello from thread %d", i);
         strcpy(threads[i].message, temp);
         pthread_create(&threads[i].id, NULL, &thread_function, &threads[i]);
-        printf("Thread %d is created\n", i);
+        printf("Thread %d is created\n", threads[i].id);
         pthread_join(threads[i].id, NULL);
     }
     return EXIT_SUCCESS;
