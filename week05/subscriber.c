@@ -15,9 +15,11 @@ int main() {
     signal(SIGINT, handler);
     char msg[1024];
     subscriber = open("/tmp/ex1", O_RDONLY);
-    if(subscriber == -1) return 1;
+    if(subscriber == -1) handler(EXIT_FAILURE);
     while(1){
-        if(read(subscriber, msg, sizeof(msg)) == -1) return 2;
+        int code = read(subscriber, msg, sizeof(msg));
+        if(code == -1) handler(2);
+        if(code == 0) handler(SIGINT);
         printf("%s", msg);
     }
 }

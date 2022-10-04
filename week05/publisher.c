@@ -20,18 +20,18 @@ int main(int argc, char *argv[]) {
     long int n;
     char *end;
     if(argc != 2)
-        return EXIT_SUCCESS;
+        handler(EXIT_SUCCESS);
     n = strtol(argv[1], &end, 10);
     char msg[1024];
     mkfifo("/tmp/ex1", 0777);
     publisher = open("/tmp/ex1", O_RDWR);
-    if(publisher == -1) return EXIT_FAILURE;
+    if(publisher == -1) handler(EXIT_FAILURE);
     while(1) {
-        fgets(msg, 200, stdin);
+        fgets(msg, 1024, stdin);
         for(int i = 0; i < n; ++i) {
             if (write(publisher, msg, strlen(msg) + 1) == -1)
-                return 2;
-            sleep(1);
+                handler(2);
+            usleep(1000000.0 / n);
         }
     }
     close(publisher);
