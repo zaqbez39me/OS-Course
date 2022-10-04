@@ -31,7 +31,7 @@ int main(int argc, char *argv[]) {
         for(int i = 0; i < n; ++i) {
             if (write(publisher, msg, strlen(msg) + 1) == -1)
                 handler(2);
-            usleep(1000000.0 / n);
+            usleep(1e6 / n);
         }
     }
     close(publisher);

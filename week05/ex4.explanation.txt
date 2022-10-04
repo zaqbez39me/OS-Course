@@ -1,4 +1,5 @@
-For this experiment, time of computation descends significantly while number of threads.
+For this experiment, time of computation descends not significantly while number of threads grows.
 The reason for that is that threads count amount of prime numbers sequentially and work independently only when
 preforming prime check.
-Therefore, more threads make program run slower.
+Therefore, more threads make program a bit faster. However, when the number of program threads reaches the number of
+physical threads, the program starts to execute slower.
