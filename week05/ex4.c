@@ -41,13 +41,16 @@ void *check_primes(void *arg)
     int number_to_check;
     while(1) {
         pthread_mutex_lock(&global_lock);
-        if((number_to_check = get_number_to_check()) == -1) {
-            pthread_mutex_unlock(&global_lock);
+        number_to_check = get_number_to_check();
+        pthread_mutex_unlock(&global_lock);
+        if(number_to_check == -1) {
             break;
         }
-        if (is_prime(number_to_check))
+        if (is_prime(number_to_check)) {
+            pthread_mutex_lock(&global_lock);
             increment_primes();
-        pthread_mutex_unlock(&global_lock);
+            pthread_mutex_unlock(&global_lock);
+        }
     }
 }
 

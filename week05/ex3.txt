@@ -1,20 +1,20 @@
 For m = 1:
-real 1.52
-user 1.52
+real 1.77
+user 1.77
 sys 0.00
 For m = 2:
-real 0.95
-user 1.53
+real 1.04
+user 1.68
 sys 0.00
 For m = 4:
-real 0.53
-user 1.65
+real 0.57
+user 1.71
 sys 0.00
 For m = 10:
-real 0.40
-user 2.48
+real 0.41
+user 2.63
 sys 0.00
 For m = 100:
-real 0.55
-user 2.40
-sys 0.32
+real 0.38
+user 2.87
+sys 0.00
