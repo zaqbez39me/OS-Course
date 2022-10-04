@@ -49,10 +49,7 @@ int main(int argc, char *argv[])
     for (int i = 0; i < n_threads; i++)
     {
         requests[i].start = i * segment_size;
-        int last = (i + 1) * segment_size;
-        requests[i].finish = (last == n ? last - 1 : last);
-        if(requests[i].finish > n)
-            requests[i].finish = n - 1;
+        requests[i].finish = requests[i].finish > n ? n : (i + 1) * segment_size;
         pthread_create(&threads[i], NULL, &prime_counter, &requests[i]);
     }
 
