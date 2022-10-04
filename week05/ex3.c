@@ -66,9 +66,9 @@ int main(int argc, char *argv[])
         total_result += *(int *)results[i];
 
     free(threads);
+    free(requests);
     for(int i = 0; i < n_threads; ++i)
         free(results[i]);
-    free(requests);
     free(results);
 
     printf("%d\n", total_result);

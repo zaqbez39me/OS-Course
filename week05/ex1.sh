@@ -1,4 +1,4 @@
-cd ... || ~/week05/
+cd ~/week05/ || exit
 
 gcc publisher.c -o publisher
 gcc subscriber.c -o subscriber
