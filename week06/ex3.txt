@@ -1,0 +1,48 @@
+Let us compare output of ex1.c and ex2.c on input from lab example:
+    Input:
+        10
+        0 1 3 6 10 11 11 11 11 11
+        1 2 4 6 8 8 6 4 2 1
+    Output ex1.c:
+        Job - A[AT - 0; BT - 1]: CT - 1, TAT - 1, WT - 0
+        Job - B[AT - 1; BT - 2]: CT - 3, TAT - 2, WT - 0
+        Job - C[AT - 3; BT - 4]: CT - 7, TAT - 4, WT - 0
+        Job - D[AT - 6; BT - 6]: CT - 13, TAT - 7, WT - 1
+        Job - E[AT - 10; BT - 8]: CT - 21, TAT - 11, WT - 3
+        Job - F[AT - 11; BT - 8]: CT - 29, TAT - 18, WT - 10
+        Job - G[AT - 11; BT - 6]: CT - 35, TAT - 24, WT - 18
+        Job - H[AT - 11; BT - 4]: CT - 39, TAT - 28, WT - 24
+        Job - I[AT - 11; BT - 2]: CT - 41, TAT - 30, WT - 28
+        Job - J[AT - 11; BT - 1]: CT - 42, TAT - 31, WT - 30
+        Average Turnaround time - 15.600000
+        Average waiting time - 11.400000
+    Output ex2.c:
+        Job - A[AT - 0; BT - 1]: CT - 1, TAT - 1, WT - 0
+        Job - B[AT - 1; BT - 2]: CT - 3, TAT - 2, WT - 0
+        Job - C[AT - 3; BT - 4]: CT - 7, TAT - 4, WT - 0
+        Job - D[AT - 6; BT - 6]: CT - 13, TAT - 7, WT - 1
+        Job - E[AT - 10; BT - 8]: CT - 34, TAT - 24, WT - 16
+        Job - F[AT - 11; BT - 8]: CT - 42, TAT - 31, WT - 23
+        Job - G[AT - 11; BT - 6]: CT - 26, TAT - 15, WT - 9
+        Job - H[AT - 11; BT - 4]: CT - 20, TAT - 9, WT - 5
+        Job - I[AT - 11; BT - 2]: CT - 16, TAT - 5, WT - 3
+        Job - J[AT - 11; BT - 1]: CT - 14, TAT - 3, WT - 2
+        Average Turnaround time - 10.100000
+        Average waiting time - 5.900000
+        Process finished with exit code 0
+    Output ex3.c for quantum equal to 2:
+        Job - A[AT - 0; BT - 1]: CT - 1, TAT - 1, WT - 0
+        Job - B[AT - 1; BT - 2]: CT - 3, TAT - 2, WT - 0
+        Job - C[AT - 3; BT - 4]: CT - 7, TAT - 4, WT - 0
+        Job - D[AT - 6; BT - 6]: CT - 24, TAT - 18, WT - 12
+        Job - E[AT - 10; BT - 8]: CT - 40, TAT - 30, WT - 22
+        Job - F[AT - 11; BT - 8]: CT - 42, TAT - 31, WT - 23
+        Job - G[AT - 11; BT - 6]: CT - 38, TAT - 27, WT - 21
+        Job - H[AT - 11; BT - 4]: CT - 32, TAT - 21, WT - 17
+        Job - I[AT - 11; BT - 2]: CT - 21, TAT - 10, WT - 8
+        Job - J[AT - 11; BT - 1]: CT - 22, TAT - 11, WT - 10
+        Average Turnaround time - 15.500000
+        Average waiting time - 11.300000
+As we can see RR has almost the same speed as FCFS in terms of average turnaround and waiting times.
+However, all the computational power in RR scheduling distributed among the ready processes uniformly.
+Average waiting time of RR depends on the time quantum. While two other algorithms doesn't depend on any extra parameter.
