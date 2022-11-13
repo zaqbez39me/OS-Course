@@ -57,10 +57,14 @@ _Bool access_memory(unsigned int *values, int *frame_indices, int page_frames_nu
 
 int main(int argc, char* argv[]){
     FILE *input = fopen("Lab 09 input.txt", "r");
+    if(input == NULL) {
+        printf("Input file does not exist\n");
+        return EXIT_FAILURE;
+    }
     int page_frames_num = atoi(argv[1]), n = 1, sym = fgetc(input);
     if(sym == EOF) {
         printf("No elements to access!");
-        return EXIT_SUCCESS;
+        return EXIT_FAILURE;
     }
     while(sym != EOF) {
         n += sym == ' ';
@@ -81,7 +85,7 @@ int main(int argc, char* argv[]){
         hits_number += access_memory(values, frame_indices, page_frames_num, temp);
     }
     misses_number = n - hits_number;
-    printf("Hits: %d, Misses: %d, Hit/Miss ratio: %lf\n", hits_number, misses_number, (double) hits_number /
+    printf("Page frames number: %d\nHits: %d, Misses: %d, Hit/Miss ratio: %lf\n", page_frames_num, hits_number, misses_number, (double) hits_number /
         (double) (misses_number));
     fclose(input);
     return EXIT_SUCCESS;
