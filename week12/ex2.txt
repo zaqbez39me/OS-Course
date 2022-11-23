@@ -1,2 +1,2 @@
-.. ex2.out file1 bin file2 lost+found lib64 lib . 
+ex2.out file2 file1 lost+found lib64 .. bin lib . 
 etc tmp proc home lib64 media snap lost+found root mnt lib32 sbin run cdrom . lib libx32 bin srv dev boot usr lofsdisk sys var .. 
