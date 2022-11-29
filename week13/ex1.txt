@@ -1,9 +1,9 @@
 0000-0cf7 : PCI Bus 0000:00
-  0000-001f : dma1 Direct Memory Access Controller (7 Channel)
-  0020-0021 : pic1 Programmable Interval Timer (Master) (wiki.osdev.org/8259_PIC)
+  0000-001f : dma1 The first legacy DMA controller, often used for transfers to floppies (https://wiki.osdev.org/I/O_Ports)
+  0020-0021 : pic1 Programmable Interval Timer (Master) (https://wiki.osdev.org/8259_PIC)
   0040-0043 : timer0
   0050-0053 : timer1 Programmable Interval Timer that used for dynamic random access memory refreshes
-  (en.wikipedia.org/wiki/Programmable_interval_timer)
+  (https://en.wikipedia.org/wiki/Programmable_interval_timer)
   0060-0060 : keyboard
   0064-0064 : keyboard
   0070-0077 : rtc0
