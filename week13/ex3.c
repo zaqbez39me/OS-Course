@@ -6,7 +6,7 @@
 #include <signal.h>
 
 int file_descriptor;
-_Bool P, E, C, A, T;
+char P, E, C, A, T;
 FILE *output;
 
 void handler(int signum) {
@@ -15,7 +15,7 @@ void handler(int signum) {
     exit(signum);
 }
 
-void change_state(__u16 code, _Bool status){
+void change_state(__u16 code, char status){
     switch (code) {
         case KEY_P:
             P = status;
@@ -62,12 +62,14 @@ int main(){
             else if(event.value == 0) {
                 --pressed_num;
                 change_state(event.code, 0);
+            } else if(event.value == 2) {
+                change_state(event.code, 2);
             }
-            if(pressed_num == 2 && P && E) {
+            if(pressed_num == 2 && P == 2 && E == 2) {
                 fprintf(output, "I passed the Exam!\n");
-            } else if(pressed_num == 3 && C && A && P){
+            } else if(pressed_num == 3 && C == 2 && A == 2 && P == 2){
                 fprintf(output, "Get some cappuccino!\n");
-            } else if(pressed_num == 2 && P && T) {
+            } else if(pressed_num == 2 && P == 2 && T == 2) {
                 fprintf(output, "This is the custom message!\n");
             }
         }
