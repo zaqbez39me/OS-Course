@@ -100,6 +100,7 @@ int main(){
     for(int i = 0; i < n_proc; ++i)
         for(int j = 0; j < n_types; ++j)
             fscanf(input, "%d", &R[i][j]);
+    fclose(input);
     _Bool something_executed = 0;
     while (1) {
         for (int i = 0; i < n_proc; ++i) {
