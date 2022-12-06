@@ -1,5 +1,5 @@
 cd ~/week05/ || exit
-gcc ex3.c -o ex3
+gcc  -pthread ex3.c -o ex3
 
 printf "For m = 1:\n" > ex3.txt
 /bin/time -p -a -o ex3.txt ./ex3 10000000 1

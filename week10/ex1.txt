@@ -1,0 +1,10 @@
+I tested my program with 10, 50 and 100-page frames and found that the hit/miss rate depends on number of page frames.
+The larger number of page frames causes the smaller number of misses. Therefore, the hit/miss rate increases with number of
+page frames on random set of pages being accessed.
+Here are results of tests:
+    10 page frames:
+        Hits: 10, Misses: 990, Hit/Miss ratio: 0.010101
+    50 page frames:
+        Hits: 51, Misses: 949, Hit/Miss ratio: 0.053741
+    100 page frames:
+        Hits: 375, Misses: 625, Hit/Miss ratio: 0.600000

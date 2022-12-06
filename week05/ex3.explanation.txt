@@ -1,2 +1,3 @@
 For this experiment, time of computation ascends significantly while number of threads grows because threads count
-amount of prime numbers independently on their intervals.
+amount of prime numbers independently on their intervals size of (n / m). However, when the number of program threads reaches the number
+of physical threads, the program starts to execute slower.

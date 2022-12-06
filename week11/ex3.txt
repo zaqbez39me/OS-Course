@@ -1,0 +1,6 @@
+-rw-rw-rw-
+-rwxrw-rwx
+-rwxrwxrwx
+660 means that owner and group can read and write. Other cannot do anything.
+775 means that owner and group have all permissions. Other can read and execute.
+777 means that all users have all permissions.

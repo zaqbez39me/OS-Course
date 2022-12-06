@@ -1,0 +1,8 @@
+The physical address refers to an actual part of memory in RAM.
+It points to the page in physical RAM and provides the offset from the start of this page.
+Operating system provides the virtual memory for an abstraction. Virtual memory is an illusion of having an unbounded
+main memory. Therefore, the programs can be larger than physical memory. Virtual memory also has addresses and page
+sizes. Virtual memory is linked with physical one and in address has special flag of presence in physical memory.
+Virtual address contains the number of page in physical memory with which it is linked, if it is linked with any.
+Therefore, the main difference is that the virtual address is an address in an abstract memory while physical address is
+an address in actual physical memory.

@@ -1,0 +1,6 @@
+The machine has 16-bit virtual addresses and pages of size equal 8KB. If the size of each page is 8KB then the offset
+varies in interval [0, 2^13 - 1] => the offset part takes the 13 out of 16 bits in address. Therefore, we can calculate
+the number of bits that takes the part representing the index of page. 16 - 13 = 3 (bits) - the remaining part for
+page indexes. Knowing number of bits of this part we can easily calculate the amount of needed entries just raising the
+2 in power of page indexes part length. 2 ^ 3 = 8.
+Answer: 8 entries are needed for a single-level linear page table.

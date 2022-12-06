@@ -1,0 +1,2 @@
+/home/zaqez39me/week11/_ex2.txt
+/home/zaqez39me/week01/file.txt
