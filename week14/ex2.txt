@@ -1,0 +1,15 @@
+Usually, recovery is better when the system working with small processes. It is better for such cases because it is easy
+to copy state of small processes for future rollback in case of deadlock occurred. Moreover, recovery is good when the
+resources that are connected with deadlock are preemptive because it makes it possible to make a recovery through
+preemption, and it will be fast in comparison to prevention and avoidance techniques.
+
+In some cases, it is better to use preemption, but it in this case system should be built in such a way that one of the
+deadlock conditions will be always false. For example, we can make impossible for processes currently holding resources
+that were granted earlier to request new resources. So if all processes in our system holding resources that were
+granted earlier do not need new resources (Just preparing all their resources before starting execution or releasing all
+the resources it currently holds and then trying to get everything it needs all at once), it is good to stay just with
+prevention.
+
+Lastly, the deadlock avoidance is better when the system knows about future process requests and just tries to schedule
+the processes in such manner that no deadlocks will occur. However, it has disadvantage that some processes can stay in
+a blocked state for a long time.
