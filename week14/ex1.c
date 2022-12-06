@@ -101,20 +101,26 @@ int main(){
         for(int j = 0; j < n_types; ++j)
             fscanf(input, "%d", &R[i][j]);
     fclose(input);
-    _Bool something_executed = 0;
+    _Bool something_executed;
     while (1) {
+        something_executed = 0;
         for (int i = 0; i < n_proc; ++i) {
             _Bool can_execute = 1;
-            for(int j = 0; j < n_types; ++j){
-                if(R[i][j] > A[j]) {
-                    can_execute = 0;
-                    break;
+            if(marked[i])
+                can_execute = 0;
+            else {
+                for (int j = 0; j < n_types; ++j) {
+                    if (R[i][j] > A[j]) {
+                        can_execute = 0;
+                        break;
+                    }
                 }
             }
-            if(can_execute){
+            if(can_execute && marked[i] == 0){
                 for(int j = 0; j < n_types; ++j)
                     A[j] += C[i][j];
                 something_executed = 1;
+                marked[i] = 1;
                 executed += 1;
             }
             if (i == n_proc - 1 && !something_executed) {
